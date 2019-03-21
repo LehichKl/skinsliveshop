@@ -1,0 +1,192 @@
+<html>
+	<head>
+		<title>skinsliveshop</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style3.css">
+	<link rel="stylesheet" type="text/css" href="../css/styleknop.css">
+	</head>
+<body>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+                          
+// Обработка по клику               
+$('a.popup').click(function(e) { 
+    e.preventDefault();
+    // Переменная для хранения атрибута rel нажатой ссылки    
+    var popupid = $(this).attr('rel');
+    $('#' + popupid).fadeIn();
+    // Добавим div fade вниз тэга body
+    // и мы уже задавали ему стиль на шаге  2 : CSS
+    $('body').append('<div id="fade"></div>');
+    $('#fade').css({'filter' : 'alpha(opacity=30%)'}).fadeIn();
+    // По центру
+    var popuptopmargin = ($('#' + popupid).height() + 10) / 2;
+    var popupleftmargin = ($('#' + popupid).width() + 10) / 2;
+    // выравнивания модального окна по центру
+    $('#' + popupid).css({
+    'margin-top' : -popuptopmargin,
+    'margin-left' : -popupleftmargin
+    });
+        document.forms.registration.reset();
+});
+
+// Переключение на основное окно
+$('#fade').click(function() {
+    $('#fade , #popuprel').fadeOut()
+    return false;    
+    });
+
+</script>
+
+
+
+	<div id="container">
+		<div id="header">
+				<div id="logo">
+				<a href="index.html"><img src="../images/logo.png" class="tovar" width="100%" height="100%"></a>
+				</div>
+					<div id="menu">
+					<a href="index.html">КУПИТЬ</a>
+					<a href="rabotaet.html">КАК ЭТО РАБОТАЕТ</a>
+					<a href="tehpoderjka.html">ТЕПОДДЕРЖКА</a>
+					</div>
+						
+		</div>
+		 
+		<div id="sidebar">
+			<h2>фильтр</h2>
+		</div>
+		 
+		<div id="content">
+		
+		
+		
+<!-- <form action="send.php" method="post">
+Ваш ник в steam<input type="text" name="first_name" required placeholder="Обязательное поле"><br>
+Email: <input type="text" name="email" required placeholder="Обязательное поле"><br>
+Ваша trade ссылка:<br><textarea rows="5" name="message" cols="30" required placeholder="Обязательное поле"></textarea><br>
+<input type="submit" name="submit" value="отправить">
+</form> -->
+		
+		
+		
+		
+			
+			<div class="col-md-8 products">
+				<div class="row">
+				<div class="col-sm-4">
+				<div class="product">
+				<div class="product-img">
+					<img src="../images/skin/mac.png" alt=""></a>
+					</div>
+					<p class="product-title">
+						<a href="#">MAC-10 | Карамельное яблоко</a>
+					</p>
+					<p class="product-desc">Немного поношенное</p>
+					<p class="product-price">Цена: 4.50 руб</p>
+					<a href="https://my.qiwi.com/Aleksei-KLdHmuGL2i"><img src="../images/kupit.png" class="tovar" ></a>
+					
+					
+					
+					<h1 align="center"><a href="" class="popup" rel="popuprel"><img src="../images/kupit.png" class="tovar" ></a></h1>      
+<form class="popupbox" id="popuprel" name="registration">
+    <input type="text">
+    <input type="text">
+    <input type="submit" value="Отправить">
+    
+</form>
+<div id="fade"></div>
+					
+					
+					
+					
+				</div>
+				</div>
+				</div>
+				</div>
+
+	
+	
+<div class="col-md-8 products">
+ <div class="row">
+  <div class="col-sm-4">
+ <div class="product">
+ <div class="product-img">
+ <a href="#"><img src="images/2.jpg" alt=""></a>
+ </div>
+ <p class="product-title">
+ <a href="#">Палатка</a>
+ </p>
+ <p class="product-desc">Лето</p>
+ <p class="product-price">Цена: <s>6500.00 руб</s> 4500.00 руб</p>
+ </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="col-md-8 products">
+ <div class="row">
+  <div class="col-sm-4">
+ <div class="product">
+ <div class="product-img">
+ <a href="#"><img src="images/3.jpg" alt=""></a>
+ </div>
+ <p class="product-title">
+ <a href="#">Ботинки MuckBoot</a>
+ </p>
+ <p class="product-desc">Зима</p>
+ <p class="product-price">Цена: 5499.00 руб</p>
+ </div>
+  </div>
+ </div>
+</div>
+
+
+
+<div class="col-md-8 products">
+ <div class="row">
+  <div class="col-sm-4">
+ <div class="product">
+ <div class="product-img">
+ <a href="#"><img src="images/4.jpg" alt=""></a>
+ </div>
+ <p class="product-title">
+ <a href="#">Патронтаж</a>
+ </p>
+ <p class="product-desc">Зима - Лето</p>
+ <p class="product-price">Цена: 1999.00 руб</p>
+ </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="col-md-8 products">
+ <div class="row">
+  <div class="col-sm-4">
+ <div class="product">
+ <div class="product-img">
+ <a href="#"><img src="images/5.jpg" alt=""></a>
+ </div>
+ <p class="product-title">
+ <a href="#">Патроны</a>
+ </p>
+ <p class="product-desc">Зима - Лето</p>
+ <p class="product-price">Цена: 499.00 руб</p>
+ </div>
+  </div>
+ </div>
+</div>	
+			
+		</div>
+		 
+		<div id="clear"> 
+		</div>
+							   
+		
+	</div>
+</body>
+</html>
